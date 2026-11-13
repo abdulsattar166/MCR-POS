@@ -1,0 +1,106 @@
+================================================================================
+Mubarak Cafe & Restaurant POS - Windows Installation Guide
+Version: 1.0.0
+================================================================================
+
+1. SYSTEM REQUIREMENTS
+----------------------
+- Operating System: Windows 10, Windows 11, or Windows Server 2016+ (64-bit)
+- Processor: Intel Core i3 / AMD Ryzen 3 or higher
+- RAM: 4 GB minimum (8 GB recommended)
+- Disk Space: 500 MB free hard disk space
+- Display: 1366 x 768 minimum resolution (1920 x 1080 Full HD recommended)
+- Java Runtime: NOT required (Bundled inside installer package)
+
+2. STEP-BY-STEP INSTALLATION
+----------------------------
+Step 1: Locate the Installer
+  Copy or download "MubarakPOS-1.0.0.exe" to the target Windows computer.
+  (Optional) Verify the SHA-256 checksum:
+  1EA8073BD16A357637FE76347BA6FBD9EA14FCF7EBE3582D0F1B76A9014F3C67
+
+Step 2: Run the Installer
+  Double-click "MubarakPOS-1.0.0.exe".
+  If Windows User Account Control (UAC) prompts "Do you want to allow this app
+  to make changes to your device?", click "Yes".
+
+Step 3: Installation Wizard Options
+  - Select Destination Folder: By default, MubarakPOS installs to
+    "C:\Program Files\MubarakPOS\". You may click "Browse..." to choose another folder.
+  - Shortcut Options: Keep the "Create Desktop Shortcut" and "Create Start Menu
+    Program Group" options checked.
+  - Click "Install" to begin file extraction.
+
+Step 4: Finish Installation
+  The installer extracts the pre-configured application, bundled Java runtime,
+  and native components. Click "Finish" when done.
+
+3. FIRST LAUNCH & AUTOMATIC SETUP
+---------------------------------
+Step 1: Launch Application
+  Double-click the "MubarakPOS" icon on your Windows Desktop or select it
+  from the Windows Start Menu under "Mubarak Restaurant POS".
+
+Step 2: Automated Bootstrap Verification
+  On initial execution, Mubarak POS automatically performs:
+  a) Creation of writable directories under "C:\RestaurantPOS\"
+  b) Local SQLite database initialization ("C:\RestaurantPOS\data\restaurant.db")
+  c) Execution of schema migrations and indexing
+  d) Seeding of authoritative 9 categories and 122 restaurant menu items
+  e) High-resolution restaurant branding extraction
+  A progress bar and splash screen will display "Ready - offline mode active".
+
+Step 3: Log In
+  Use one of the pre-configured default staff accounts:
+
+  * System Owner / Administrator:
+    Username: food_admin@gmail.com
+    Password: admin@1122
+
+  * Front Desk Cashier:
+    Username: food_cashier@gmail.com
+    Password: cashier@1122
+
+  Note: For security, the system will prompt the Administrator to change their
+  password on initial sign-in.
+
+4. APPLICATION STORAGE STRUCTURE
+--------------------------------
+The application adheres strictly to standard Windows security policies. The
+installation directory in Program Files is read-only. All operational data is
+maintained in:
+
+  C:\RestaurantPOS\
+  ├── data\
+  │   └── restaurant.db            (Live SQLite Database)
+  ├── backups\                     (Daily & manual database backups)
+  ├── reports\
+  │   ├── Excel\                   (Exported .xlsx spreadsheets)
+  │   ├── PDF\                     (Exported PDF reports)
+  │   └── CSV\                     (Exported raw data CSVs)
+  ├── receipts\                    (Customer & Kitchen PDF receipts)
+  ├── images\
+  │   ├── food\                    (Menu item photographs)
+  │   └── restaurant\              (Restaurant branding & logo)
+  ├── logs\
+  │   └── restaurant-pos.log       (Runtime diagnostic logging)
+  └── config\                      (Local hardware configuration)
+
+5. UNINSTALLATION PROCEDURE
+---------------------------
+To remove MubarakPOS from Windows:
+1. Open Windows Settings -> Apps -> Installed Apps (or Control Panel -> Programs and Features).
+2. Select "MubarakPOS" and click "Uninstall".
+3. Follow the uninstallation prompts.
+
+DATA RETENTION GUARANTEE:
+The uninstaller removes only application program files. Your historical sales
+records, receipts, customer data, and SQLite database in "C:\RestaurantPOS\"
+are safely preserved to prevent accidental data loss.
+
+6. CUSTOMER SUPPORT
+-------------------
+For technical assistance, hardware setup, or menu customization inquiries:
+Email: support@mubarakrestaurant.com
+Office: Mubarak Cafe & Restaurant, Main Branch
+================================================================================

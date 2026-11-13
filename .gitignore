@@ -1,0 +1,12 @@
+target/
+dist/
+logs/
+*.log
+*.db
+*.db-shm
+*.db-wal
+.idea/
+.vscode/
+*.iml
+client_secret*.json
+drive-tokens/
