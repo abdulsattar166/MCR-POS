@@ -10,3 +10,10 @@ logs/
 *.iml
 client_secret*.json
 drive-tokens/
+
+RestaurantPOS-Release/
+release/
+target/
+build/
+*.exe
+
