@@ -17,3 +17,10 @@ target/
 build/
 *.exe
 
+
+RestaurantPOS-Release/
+release/
+target/
+build/
+*.exe
+
